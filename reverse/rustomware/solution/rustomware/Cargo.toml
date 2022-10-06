@@ -1,0 +1,16 @@
+[package]
+name = "rustomware"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio = { version = "0.2", features = ["macros"] }
+serenity = { default-features = false, features = ["client", "gateway", "model", 
+"rustls_backend"], version = "0.9.0-rc.2"}
+hex = "0.4"
+chacha20poly1305 = { version = "0.9.0", features = ["stream"] }
+anyhow = "1.0"
+rand = "0.8"
+magic-crypt = "3.1.10"

@@ -1,0 +1,30 @@
+name: rustomware
+author: yalatreche
+author_link: https://github.com/Yassine-Latreche
+
+category: reverse
+difficulty: medium
+
+description: |
+  > We just got attacked by a ransomware, and our most important file 'flag.txt' got encrypted.
+  > Luckly for us, we got YOU, so can you please help us! 
+
+  **Author** : @yalatreche, **Idea** : @Fa2y
+
+flags:
+  - IngeHack{533_3v3N_D15c0RD_C4n_83_3V1L}
+
+type: dynamic
+value: 500
+extra:
+    initial: 500
+    decay: ${DECAY}
+    minimum: 50
+
+files:
+  - files/rustomware
+  - files/flag.txt.encrypted
+
+state: hidden
+
+version: "0.1"
