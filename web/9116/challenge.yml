@@ -1,0 +1,27 @@
+name: 9116
+author: vvxhid
+# Author website or Github link
+author_link: twitter.com/vxxhid1
+
+category: web
+
+difficulty: easy
+
+description: |
+  > call 9116
+  **Author** : vvxhid
+flags:
+  - IngeHack{securityFTW}
+
+type: dynamic
+value: 500
+extra:
+    initial: 500
+    decay: ${DECAY} # leave it like this
+    minimum: 50
+
+image: 
+
+connection_info: connection_info
+state: hidden
+version: "0.1"
