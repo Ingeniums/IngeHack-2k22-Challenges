@@ -1,4 +1,4 @@
-# GDG Algiers CTF 2022 
+# Ingehack CTF 2022 
 
 ## About
 
