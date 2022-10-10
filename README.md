@@ -2,7 +2,7 @@
 
 ## About
 
-This repository contains CTF challenges and official write-ups for GDG Algiers CTF 2022 .
+This repository contains CTF challenges and official write-ups for IngeHack 2022.
 
 ## For challenge developers
 
@@ -23,13 +23,13 @@ There's a [leetify.py](leetify.py) script that can be used to generate l33t flag
 #### Example usage
 
 ```bash
-python3 leetify.py CyberErudites some_cool_flag
+python3 leetify.py IngeHack some_cool_flag
 ```
 
 Output :  
 
 ```txt
-CyberErudites{s0mE_C0oL_fL4G}
+IngeHack{s0mE_C0oL_fL4G}
 ```
 
 ### TODO

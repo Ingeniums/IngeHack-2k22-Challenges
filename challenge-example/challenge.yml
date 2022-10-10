@@ -34,7 +34,7 @@ flags:
   #    special characters (separated by comma): _, @, >, <, :, ., -, +, $, #, !
   # 2. The string inside the flag format should be at least 12 characters long and
   #    hard to guess.
-  - CyberErudites{s0m3th1ng_l33t}
+  - IngeHack{s0m3th1ng_l33t}
 
 # Challenge type and points
 # For regular challenges leave like this:
