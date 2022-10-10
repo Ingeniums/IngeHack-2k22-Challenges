@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Values.deployment.name }}
+  labels:
+    category: {{ .Values.category }}
+    challenge: {{ .Values.deployment.name }}
+    egress: {{ .Values.deployment.egress }}
+    {{- include "ctf-challenge-chart.labels" . | nindent 4 }}
+spec:
+  type: NodePort
+  ports:
+    - port: {{ .Values.deployment.containerPort }}
+      {{ if eq .Values.deployment.type "http" }}
+      name: http
+      {{ else if eq .Values.deployment.type "tcp"}}
+      name: tcp
+      {{ end }}
+      targetPort: {{ .Values.deployment.containerPort }}
+      nodePort: {{ .Values.deployment.nodePort}}
+    {{ if .Values.deployment.additionalContainers}}
+    {{- range .Values.deployment.additionalContainers }}
+    - port: {{ .containerPort }} 
+      name: {{ .name }}
+      targetPort: {{ .containerPort }}
+      nodePort: {{ .nodePort}}
+    {{- end }}
+    {{ end }}
+  selector:
+    challenge: {{ .Values.deployment.name }}
+    category: {{ .Values.category }}
+    egress: {{ .Values.deployment.egress }}
+    {{- include "ctf-challenge-chart.selectorLabels" . | nindent 4 }}

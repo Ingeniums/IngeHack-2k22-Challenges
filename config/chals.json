@@ -1,0 +1,122 @@
+{
+    "eddy": {
+        "name": "eddy",
+        "subdomain": "eddy",
+        "type": "tcp",
+        "category": "crypto",
+        "autoban": true,
+        "path": "crypto/Eddy",
+        "nodeport": 30000,
+        "port": 1000
+    },
+    "kevin-higgs-the-revenge": {
+        "name": "kevin-higgs-the-revenge",
+        "subdomain": "kevin-higgs-the-revenge",
+        "type": "tcp",
+        "category": "jail",
+        "autoban": true,
+        "path": "jail/kevin-higgs-the-revenge",
+        "nodeport": 30300,
+        "port": 1300
+    },
+    "netflix-prize": {
+        "name": "netflix-prize",
+        "subdomain": "netflix-prize",
+        "type": "http",
+        "category": "misc",
+        "autoban": true,
+        "path": "misc/Netflix-Prize",
+        "nodeport": 30200,
+        "port": 1200
+    },
+    "counter": {
+        "name": "counter",
+        "subdomain": "counter",
+        "type": "tcp",
+        "category": "pwn",
+        "autoban": true,
+        "path": "pwn/counter",
+        "nodeport": 30402,
+        "port": 1402
+    },
+    "encryptor": {
+        "name": "encryptor",
+        "subdomain": "encryptor",
+        "type": "tcp",
+        "category": "pwn",
+        "autoban": false,
+        "path": "pwn/encryptor",
+        "nodeport": 30401,
+        "port": 1401
+    },
+    "yanc": {
+        "name": "yanc",
+        "subdomain": "yanc",
+        "type": "tcp",
+        "category": "pwn",
+        "autoban": true,
+        "path": "pwn/yanc",
+        "nodeport": 30406,
+        "port": 1406
+    },
+    "cookauth": {
+        "name": "cookauth",
+        "subdomain": "cookauth",
+        "type": "http",
+        "category": "web",
+        "autoban": true,
+        "path": "web/cookauth",
+        "nodeport": 30602,
+        "port": 1602
+    },
+    "notes-keeper": {
+        "name": "notes-keeper",
+        "subdomain": "notes-keeper",
+        "type": "tcp",
+        "category": "pwn",
+        "autoban": true,
+        "path": "pwn/notes_keeper",
+        "nodeport": 30405,
+        "port": 1405
+    },
+    "exorcist": {
+        "name": "exorcist",
+        "subdomain": "exorcist",
+        "type": "tcp",
+        "category": "crypto",
+        "autoban": true,
+        "path": "crypto/eXORcist",
+        "nodeport": 30002,
+        "port": 1002
+    },
+    "red-diamond": {
+        "name": "red-diamond",
+        "subdomain": "red-diamond",
+        "type": "tcp",
+        "category": "jail",
+        "autoban": true,
+        "path": "jail/red-diamond",
+        "nodeport": 30303,
+        "port": 1303
+    },
+    "validator": {
+        "name": "validator",
+        "subdomain": "validator",
+        "type": "http",
+        "category": "web",
+        "autoban": true,
+        "path": "web/validator",
+        "nodeport": 30600,
+        "port": 1600
+    },
+    "perfect-model": {
+        "name": "perfect-model",
+        "subdomain": "perfect-model",
+        "type": "http",
+        "category": "web",
+        "autoban": true,
+        "path": "web/perfect-model",
+        "nodeport": 30603,
+        "port": 1603
+    }
+}

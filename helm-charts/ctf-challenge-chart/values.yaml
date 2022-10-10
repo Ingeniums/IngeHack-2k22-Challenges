@@ -1,0 +1,47 @@
+deployment:
+  replicasNumber: 1
+  # Type of the challenge either tcp or http 
+  # type: http 
+  dockerRepository: gcr.io/gdg-ctf-2022
+  # dockerImage: test-image
+  # If the challenge don't expose any port then leave it empty
+  # containerPort: 80
+  # Port that will be exposed on each k8s node 
+  # nodePort: 30002
+  limits:
+    cpu: 200m
+    memory: 500Mi 
+  requests:
+    cpu: 100m
+    memory: 200Mi 
+
+  healthCheck:
+    initialDelaySeconds: 10
+    periodSeconds: 100
+
+  # Allow/Deny egress (outcoming) traffic from pod
+  # "allow" -> Allow outcoming traffic
+  # "deny" -> Deny outcoming traffic
+  egress: "allow"
+
+  other: 
+    # parameters of pod annotations 
+    podAnnotations: {}
+
+  # additionalContainers:
+  #   - name: nameContainer 
+  #     dockerRepository: gcr.io/
+  #     dockerImage: name-container
+  #     containerPort: 80
+  #     nodePort: 30002
+  #     type: http
+  #     resources:
+  #       limits:
+  #         cpu: 100m
+  #         memory: 150Mi
+  #       requests: 
+  #         cpu: 50m 
+  #         memory: 100Mi
+  #     healthCheck:
+  #       initialDelaySeconds: 10
+  #       periodSeconds: 30
