@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ challenge['name'] }}
+  labels:
+    category: {{ challenge['category'] }}
+    challenge: {{ challenge['name'] }}
+spec:
+  replicas: {{ challenge['replicas'] }}
+  selector:
+    matchLabels:
+      category: {{ challenge['category'] }}
+      challenge: {{ challenge['name'] }}
+  template:
+    metadata:
+      labels:
+        category: {{ challenge['category'] }}
+        challenge: {{ challenge['name'] }}
+    spec:
+      automountServiceAccountToken: false
+      enableServiceLinks: false{% if challenge['type'] == 'http' %}
+      containers:
+      - name: web{% elif challenge['type'] == 'tcp' %}
+      containers:
+      - name: server{% endif %}
+        image: {{ challenge['docker_registry'] }}/{{ challenge['docker_registry_challenge_name'] }}
+        resources:
+          limits:
+            cpu: {{ challenge['cpu_limit'] }}m
+            memory: {{ challenge['memory_limit'] }}Mi
+          requests:
+            cpu: {{ challenge['cpu_request'] }}m
+            memory: {{ challenge['memory_request'] }}Mi{% if challenge['container_port'] %}
+        ports:
+        - containerPort: {{ challenge['container_port'] }}{% if challenge['type'] == 'http' %}
+          name: http{% elif challenge['type'] == 'tcp' %}
+          name: tcp{% endif %}
+        livenessProbe:{% if challenge['type'] == 'http' %}
+          httpGet:
+            path: /
+            port: http{% elif challenge['type'] == 'tcp' %}
+          tcpSocket:
+            port: tcp{% endif %}
+          initialDelaySeconds: {{ challenge['initial_delay_seconds'] }}
+          periodSeconds: {{ challenge['period_seconds'] }}{% endif %}

@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ challenge['name'] }}
+  labels:
+    category: {{ challenge['category'] }}
+    challenge: {{ challenge['name'] }}
+spec:
+  type: NodePort
+  selector:
+    category: {{ challenge['category'] }}
+    challenge: {{ challenge['name'] }}
+  ports:
+    - port: {{ challenge['container_port'] }}{% if challenge['type'] == 'http' %}
+      name: http{% elif challenge['type'] == 'tcp' %}
+      name: tcp{% endif %}
+      targetPort: {{ challenge['container_port'] }}
+      nodePort: {{ challenge['node_port'] }}

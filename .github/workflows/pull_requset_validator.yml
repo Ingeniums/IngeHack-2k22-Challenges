@@ -1,0 +1,29 @@
+name: challenge__validator
+on: [pull_request]
+jobs:
+  challenge-validator:
+    runs-on: ubuntu-latest
+    steps:
+      - id: file_changes
+        uses: trilom/file-changes-action@v1.2.3
+        with:
+          output: ','
+          fileOutput: ','
+          
+      - id: github-checkout
+        uses: actions/checkout@v1
+
+      - name: Check if only one chall added
+        run: |
+         # scripts/only_one_chall.sh
+          chmod +x "${GITHUB_WORKSPACE}/.github/scripts/only_one_chall.sh"       
+           # run script
+          "${GITHUB_WORKSPACE}/.github/scripts/only_one_chall.sh" "${{ steps.file_changes.outputs.files}}"
+
+      - name: Validate .yml file
+        if: ${{ success() }}
+        run: |
+         # scripts/yml_validation.sh
+          chmod +x "${GITHUB_WORKSPACE}/.github/scripts/yml_validation.sh"       
+           # run script
+          "${GITHUB_WORKSPACE}/.github/scripts/yml_validation.sh" "${{ steps.file_changes.outputs.files}}"

@@ -1,0 +1,2 @@
+#domainname     backendname{% for chal in challenges %}
+{{ chal["subdomain"] or chal["name"] }}.{{ DOMAIN_NAME }}    be_{{ chal["name"] }}{% endfor %}

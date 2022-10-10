@@ -1,0 +1,6 @@
+#domainname     backendname
+{% for chal in challenges %}
+{% if chal["type"] == HTTP_TYPE %}
+{{ chal["subdomain"] }}.{{ DOMAIN_NAME }}    be_{{ chal["name"] }}
+{% endif %}
+{% endfor %}
