@@ -1,0 +1,34 @@
+name: ingection2
+author: vvxhid
+author_link: author_link
+category: web
+difficulty: medium
+
+description: |
+  > A simple app to POST feedbacks.  
+  **Author** : vvxhid
+flags:
+  - IngeHack{Sql1t3_Bl00b_FTW#1337$}
+
+type: dynamic
+value: 500
+extra:
+    initial: 500
+    decay: ${DECAY} # leave it like this
+    minimum: 50
+
+image: image
+
+connection_info: connection_info
+
+tags:
+  - web
+
+files:
+  - files/app.py
+
+# DO NOT CHANGE
+
+state: hidden
+
+version: "0.1"
