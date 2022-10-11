@@ -39,16 +39,6 @@
         "nodeport": 30402,
         "port": 1402
     },
-    "encryptor": {
-        "name": "encryptor",
-        "subdomain": "encryptor",
-        "type": "tcp",
-        "category": "pwn",
-        "autoban": false,
-        "path": "pwn/encryptor",
-        "nodeport": 30401,
-        "port": 1401
-    },
     "yanc": {
         "name": "yanc",
         "subdomain": "yanc",
@@ -58,6 +48,16 @@
         "path": "pwn/yanc",
         "nodeport": 30406,
         "port": 1406
+    },
+    "perfect-model": {
+        "name": "perfect-model",
+        "subdomain": "perfect-model",
+        "type": "http",
+        "category": "web",
+        "autoban": true,
+        "path": "web/perfect-model",
+        "nodeport": 30603,
+        "port": 1603
     },
     "cookauth": {
         "name": "cookauth",
@@ -109,14 +109,144 @@
         "nodeport": 30600,
         "port": 1600
     },
-    "perfect-model": {
-        "name": "perfect-model",
-        "subdomain": "perfect-model",
+    "encryptor": {
+        "name": "encryptor",
+        "subdomain": "encryptor",
+        "type": "tcp",
+        "category": "pwn",
+        "autoban": false,
+        "path": "pwn/encryptor",
+        "nodeport": 30401,
+        "port": 1401
+    },
+    "yatodo": {
+        "name": "yatodo",
+        "subdomain": "yatodo",
         "type": "http",
         "category": "web",
         "autoban": true,
-        "path": "web/perfect-model",
-        "nodeport": 30603,
-        "port": 1603
+        "path": "web/yatodo",
+        "nodeport": 30607,
+        "port": 1607
+    },
+    "yatodo-bot": {
+        "name": "yatodo-bot",
+        "subdomain": "yatodo-bot",
+        "type": "tcp",
+        "category": "web",
+        "autoban": true,
+        "path": "web/yatodo",
+        "nodeport": 30608,
+        "port": 1608
+    },
+    "xor": {
+        "name": "xor",
+        "subdomain": "xor",
+        "type": "tcp",
+        "category": "pwn",
+        "autoban": true,
+        "path": "pwn/xor",
+        "nodeport": 30400,
+        "port": 1400
+    },
+    "faster-python": {
+        "name": "faster-python",
+        "subdomain": "faster-python",
+        "type": "tcp",
+        "category": "pwn",
+        "autoban": true,
+        "path": "pwn/faster-python",
+        "nodeport": 30403,
+        "port": 1403
+    },
+    "py-explorer": {
+        "name": "py-explorer",
+        "subdomain": "py-explorer",
+        "type": "tcp",
+        "category": "jail",
+        "autoban": true,
+        "path": "jail/py-explorer",
+        "nodeport": 30301,
+        "port": 1301
+    },
+    "type-it": {
+        "name": "type-it",
+        "subdomain": "type-it",
+        "type": "tcp",
+        "category": "jail",
+        "autoban": false,
+        "path": "jail/type_it",
+        "nodeport": 30302,
+        "port": 1302
+    },
+    "nitro": {
+        "name": "nitro",
+        "subdomain": "nitro",
+        "type": "tcp",
+        "category": "crypto",
+        "autoban": true,
+        "path": "crypto/nitro",
+        "nodeport": 30001,
+        "port": 1001
+    },
+    "ezphp": {
+        "name": "ezphp",
+        "subdomain": "ezphp",
+        "type": "http",
+        "category": "web",
+        "autoban": true,
+        "path": "web/ezphp",
+        "nodeport": 30606,
+        "port": 1606
+    },
+    "ezphp-fixed": {
+        "name": "ezphp-fixed",
+        "subdomain": "ezphp-fixed",
+        "type": "http",
+        "category": "web",
+        "autoban": true,
+        "path": "web/ezphp-fixed",
+        "nodeport": 30610,
+        "port": 1610
+    },
+    "mind-games": {
+        "name": "mind-games",
+        "subdomain": "mind-games",
+        "type": "tcp",
+        "category": "pwn",
+        "autoban": true,
+        "path": "pwn/mind-games",
+        "nodeport": 30404,
+        "port": 1404
+    },
+    "type-it-2": {
+        "name": "type-it-2",
+        "subdomain": "type-it-2",
+        "type": "tcp",
+        "category": "jail",
+        "autoban": false,
+        "path": "jail/type_it_2",
+        "nodeport": 30304,
+        "port": 1304
+    },
+    "pipe-your-way": {
+        "name": "pipe-your-way",
+        "subdomain": "pipe-your-way",
+        "type": "http",
+        "category": "web",
+        "autoban": true,
+        "path": "web/pipe-your-way",
+        "nodeport": 30604,
+        "port": 1604
+    },
+    "lay-lowah": {
+        "name": "lay-lowah",
+        "subdomain": "lay-lowah",
+        "type": "http",
+        "category": "web",
+        "autoban": true,
+        "path": "web/lay-lowah",
+        "nodeport": 30609,
+        "port": 1609
     }
 }

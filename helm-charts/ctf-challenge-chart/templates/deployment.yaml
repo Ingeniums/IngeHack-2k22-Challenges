@@ -29,6 +29,12 @@ spec:
     spec:
       enableServiceLinks: false 
       automountServiceAccountToken: false
+      {{ if .Values.deployment.hostAlias }}
+      hostAliases:
+      - ip: "127.0.0.1"
+        hostnames:
+          - {{ .Values.deployment.hostAlias }}
+      {{ end }}
       {{ if eq .Values.deployment.type "http"}}
       containers:
         - name: web 
@@ -45,6 +51,7 @@ spec:
             - name: tcp
             {{ end}}
               containerPort: {{ .Values.deployment.containerPort}}
+          {{ if .Values.deployment.healthCheck }}
           livenessProbe:
             {{ if eq .Values.deployment.type "http" }}
             httpGet:
@@ -56,6 +63,7 @@ spec:
             {{ end }}
             initialDelaySeconds: {{ .Values.deployment.healthCheck.initialDelaySeconds }}
             periodSeconds: {{ .Values.deployment.healthCheck.periodSeconds }}
+          {{ end }}
           {{ end }}
           resources:
             limits:
@@ -77,6 +85,7 @@ spec:
             - name: tcp
             {{ end}}
               containerPort: {{ .containerPort}}
+          {{ if .healthCheck }}
           livenessProbe:
             {{ if eq .type "http" }}
             httpGet:
@@ -88,6 +97,7 @@ spec:
             {{ end }}
             initialDelaySeconds: {{ .healthCheck.initialDelaySeconds }}
             periodSeconds: {{ .healthCheck.periodSeconds }}
+          {{ end }}
           {{ end }}
           resources:
             limits:

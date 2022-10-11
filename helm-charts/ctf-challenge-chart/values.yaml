@@ -15,9 +15,9 @@ deployment:
     cpu: 100m
     memory: 200Mi 
 
-  healthCheck:
-    initialDelaySeconds: 10
-    periodSeconds: 100
+  # healthCheck:
+  #   initialDelaySeconds: 10
+  #   periodSeconds: 100
 
   # Allow/Deny egress (outcoming) traffic from pod
   # "allow" -> Allow outcoming traffic
