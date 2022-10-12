@@ -50,7 +50,7 @@ extra:
 
 # Settings used for Dockerfile deployment
 # If not used, remove or set to null
-image: gcr.io/gdg-ctf-2022/{challenge_name}
+image: gcr.io/ingehack-2022/{challenge_name}
 
 # Optional settings
 
@@ -106,7 +106,7 @@ deployment:
   replicasNumber: 1
   # Type of the challenge either tcp or http 
   type: http 
-  dockerRepository: gcr.io/gdg-ctf-2022
+  dockerRepository: gcr.io/ingehack-2022
   dockerImage: challenge-name
   # If the challenge don't expose any port then leave it empty
   containerPort: 80
