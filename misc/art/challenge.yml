@@ -1,0 +1,36 @@
+name: art
+author: vvxhid
+author_link: author_link
+category: misc
+difficulty: easy
+
+description: |
+  > How to Depixelate an Image Without Photoshop?.
+  > PS: IngeHack{secret_here}.
+  **Author** : vvxhid
+flags:
+  - IngeHack{pixelsart}
+
+type: dynamic
+value: 500
+extra:
+    initial: 500
+    decay: ${DECAY} # leave it like this
+    minimum: 50
+
+image: image
+
+connection_info: connection_info
+
+tags:
+  - guessing
+  - misc
+
+files:
+- challenge.png
+
+# DO NOT CHANGE
+
+state: hidden
+
+version: "0.1"
