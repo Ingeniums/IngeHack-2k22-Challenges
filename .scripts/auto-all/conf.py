@@ -1,14 +1,14 @@
 # script.py
 
-INSTANCE_NAME = "haproxy"
-INSTANCE_ZONE = "europe-west8-a"
+INSTANCE_NAME = "ingehack-haproxy"
+INSTANCE_ZONE = "europe-west8-c"
 HAPROXY_USER = "root"
-PROJECT_ID = "gdg-ctf-2022"
+PROJECT_ID = "ingehack-2022"
 
 STATS_PORT = 8080
 STATS_USER = "admin"
 STATS_PASSWORD = "9IIZHx53FATnUtJVTVcc"
-DOMAIN_NAME = "chal.ctf.gdgalgiers.com"
+DOMAIN_NAME = "chal.ctf.ingeniums.club"
 HAPROXY_ROOT = "/etc/haproxy"
 HAPROXY_MAPS_ROOT = f"{HAPROXY_ROOT}/maps"
 HTTP_HOSTS_MAP = "http-hosts.map"
@@ -29,9 +29,9 @@ TEMPLATES_DIR = "templates"
 HAPROXY_CFG = "haproxy.cfg"
 HAPROXY_CONFIG_DIR = "config/haproxy"
 DEPLOY = True
-HELM_CHART_REPO = f"oci://europe-west3-docker.pkg.dev/{PROJECT_ID}/gdg-ctf-helm-repo/ctf-challenge-chart"
+HELM_CHART_REPO = f"oci://europe-west8-docker.pkg.dev/{PROJECT_ID}/ingehack-helm-repo/ctf-challenge-chart"
 HELM_CHART_VERSION = "0.1.0"
-HELM_REGISTRY = "https://europe-west3-docker.pkg.dev"
+HELM_REGISTRY = "https://europe-west8-docker.pkg.dev"
 # IP blacklisting
 IP_BAN_MINUTES = 2 # 2 minutes
 CONN_RATE_SECONDS = 30 # 30 seconds
@@ -43,7 +43,7 @@ DECAY = 50
 
 MAX_NODES = 14
 NODES_FQDN = "gke-nodes.internal"
-CTFD_LINK = "https://ctf.gdgalgiers.com"
+CTFD_LINK = "https://ctf.ingeniums.club"
 
 # challenge.py
 
