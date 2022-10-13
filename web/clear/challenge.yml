@@ -1,0 +1,31 @@
+name: clear
+author: vvxhid
+author_link: author_link
+category: web
+difficulty: medium
+
+description: |
+  > HTTP2 is here, let's sneak!  
+  **Author** : vvxhid
+flags:
+  - IngeHack{cl34rt3xt_4nd_r3v3rse_pr0xy_byp4ss}
+
+type: dynamic
+value: 500
+extra:
+    initial: 500
+    decay: ${DECAY} # leave it like this
+    minimum: 50
+
+image: image
+
+connection_info: connection_info
+
+tags:
+  - web
+
+# DO NOT CHANGE
+
+state: hidden
+
+version: "0.1"
