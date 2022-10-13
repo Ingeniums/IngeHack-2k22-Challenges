@@ -1,4 +1,5 @@
 [
-    "web/validator",
-    "misc/kevin-higgs-the-revenge"
+    "pwn/warmup",
+    "pwn/secure_coding",
+    "pwn/guessing_game"
 ]

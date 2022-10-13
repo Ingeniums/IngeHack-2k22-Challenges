@@ -1,34 +1,49 @@
-name: "Guessing Game"
-author: "Scorpion197"
-author_link: "https://github.com/Scorpion197"
-
+author: Scorpion197
+author_link: https://github.com/Scorpion197
 category: pwn
+connection_info: nc -v pwn.chal.ctf.ingeniums.club 1402
+deployment:
+  autoban: true
+  containerPort: 9001
+  deployed: true
+  dockerImage: guessing-game
+  dockerRepository: gcr.io/ingehack-2022
+  egress: deny
+  healthCheck:
+    initialDelaySeconds: 10
+    periodSeconds: 30
+  limits:
+    cpu: 200m
+    memory: 500Mi
+  name: guessing-game
+  nodePort: 30402
+  other:
+    podAnnotations: {}
+  replicasNumber: 2
+  requests:
+    cpu: 100m
+    memory: 200Mi
+  type: tcp
+description: '> I heard that no one can beat computers in guessing games. Can you
+  prove me wrong ?
 
+  '
 difficulty: medium
-
-description: |
-  > I heard that no one can beat computers in guessing games. Can you prove me wrong ?
-flags:
-  - IngeHack{typ3_c0nfus10n_&_u$e_aft3r_fr33_go1ng_w1ld}
-
-topics:
-  - Heap exploitation
-
-tags:
-  - pwn
-
-files:
-  - ./dist/dist.zip
-
-image: warmup
-
-connection_info: nc hostname 9003
-
-value: 500
-type: dynamic
 extra:
+  decay: 50
   initial: 500
-  decay: 15
   minimum: 50
+files:
+- ./dist/dist.zip
+flags:
+- IngeHack{typ3_c0nfus10n_&_u$e_aft3r_fr33_go1ng_w1ld}
+image: warmup
+name: Guessing Game
 state: hidden
-version: "0.1"
+tags:
+- pwn
+topics:
+- Heap exploitation
+type: dynamic
+value: 500
+version: '0.1'

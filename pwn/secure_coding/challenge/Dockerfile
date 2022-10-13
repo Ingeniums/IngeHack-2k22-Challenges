@@ -15,6 +15,9 @@ COPY ld-2.31.so /home/coding/ld-2.31.so
 
 RUN chmod +x chall entrypoint.sh ld-2.31.so libc.so.6 && chown coding:coding .
 
+
+EXPOSE 9001
+
 USER coding 
 
 CMD ["./entrypoint.sh"]

@@ -16,6 +16,8 @@ COPY entrypoint.sh ./
 RUN patchelf --set-interpreter ./ld-2.29.so --replace-needed libc.so.6 ./libc.so.6 chall
 RUN chmod +x chall entrypoint.sh libc.so.6 ld-2.29.so && chown game:game . 
 
+EXPOSE 9001
+
 USER game 
 
 CMD ["./entrypoint.sh"]

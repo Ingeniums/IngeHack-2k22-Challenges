@@ -1,1 +1,32 @@
-{}
+{
+    "warmup": {
+        "name": "warmup",
+        "subdomain": "warmup",
+        "type": "tcp",
+        "category": "pwn",
+        "autoban": true,
+        "path": "pwn/warmup",
+        "nodeport": 30400,
+        "port": 1400
+    },
+    "guessing-game": {
+        "name": "guessing-game",
+        "subdomain": "guessing-game",
+        "type": "tcp",
+        "category": "pwn",
+        "autoban": true,
+        "path": "pwn/guessing_game",
+        "nodeport": 30402,
+        "port": 1402
+    },
+    "secure-coding": {
+        "name": "secure-coding",
+        "subdomain": "secure-coding",
+        "type": "tcp",
+        "category": "pwn",
+        "autoban": true,
+        "path": "pwn/secure_coding",
+        "nodeport": 30401,
+        "port": 1401
+    }
+}

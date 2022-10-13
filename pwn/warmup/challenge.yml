@@ -1,34 +1,48 @@
-name: "Warmup"
-author: "Scorpion197"
-author_link: "https://github.com/Scorpion197"
-
+author: Scorpion197
+author_link: https://github.com/Scorpion197
 category: pwn
+connection_info: nc -v pwn.chal.ctf.ingeniums.club 1400
+deployment:
+  autoban: true
+  containerPort: 9001
+  deployed: true
+  dockerImage: warmup
+  dockerRepository: gcr.io/ingehack-2022
+  egress: deny
+  healthCheck:
+    initialDelaySeconds: 10
+    periodSeconds: 30
+  limits:
+    cpu: 200m
+    memory: 500Mi
+  name: warmup
+  nodePort: 30400
+  other:
+    podAnnotations: {}
+  replicasNumber: 2
+  requests:
+    cpu: 100m
+    memory: 200Mi
+  type: tcp
+description: '> No description needed. Put your shellcode and get your flag.
 
+  '
 difficulty: easy
-
-description: |
-  > No description needed. Put your shellcode and get your flag.
-flags:
-  - IngeHack{y0u_ar3_4_re4l_l1nux_gu6u}
-
-topics:
-  - Shellcoding
-
-tags:
-  - pwn
-
-files:
-  - ./dist/dist.zip
-
-image: warmup
-
-connection_info: nc hostname 9001
-
-value: 500
-type: dynamic
 extra:
+  decay: 50
   initial: 500
-  decay: 15
   minimum: 50
+files:
+- ./dist/dist.zip
+flags:
+- IngeHack{y0u_ar3_4_re4l_l1nux_gu6u}
+image: warmup
+name: Warmup
 state: hidden
-version: "0.1"
+tags:
+- pwn
+topics:
+- Shellcoding
+type: dynamic
+value: 500
+version: '0.1'

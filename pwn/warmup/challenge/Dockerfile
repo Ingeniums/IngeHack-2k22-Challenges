@@ -16,6 +16,8 @@ COPY ./entrypoint.sh ./
 
 RUN chmod +x entrypoint.sh chall && chown -R warmup:warmup .
 
+EXPOSE 9001
+
 USER warmup
 
 CMD ["./entrypoint.sh"]
