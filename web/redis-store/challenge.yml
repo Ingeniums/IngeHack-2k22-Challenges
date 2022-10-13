@@ -1,0 +1,22 @@
+author: vvxhid
+author_link: https://twitter.com/vvxhid1
+category: web
+connection_info: connection_info
+description: "> Checkout my redis store. \n\n**Author** : vvxhid\n"
+difficulty: medium
+extra:
+  decay: 50
+  initial: 500
+  minimum: 50
+files:
+- files/server.js
+flags:
+- IngeHack{4lw4ys-w1th-pr0t0-72187312}
+image: image
+name: redis-store
+state: hidden
+topics:
+- web
+type: dynamic
+value: 500
+version: '0.1'
