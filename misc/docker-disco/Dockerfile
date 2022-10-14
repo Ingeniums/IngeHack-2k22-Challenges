@@ -1,4 +1,4 @@
-FROM scorpion197/misc_chall:misc_chall_tag
+FROM scorpion197/docker-disco:latest
 
 WORKDIR /home/challenge/
 COPY ./app/main.py ./main.py  
