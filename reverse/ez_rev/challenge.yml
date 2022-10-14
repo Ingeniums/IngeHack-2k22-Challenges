@@ -1,0 +1,21 @@
+author: yalatr3ch3
+author_link: https://github.com/Yassine-Latreche
+category: reverse
+description: |
+  > Wannna learn reverse ? here is an easy challenge
+
+  **Author** : yalatr3ch3
+difficulty: easy
+extra:
+  decay: 50
+  initial: 500
+  minimum: 50
+files:
+- files/ez_rev
+flags:
+- IngeHack{c0n9r4t5_h4ck3rm4n_w3ll_d0n3}
+name: ez_rev
+state: hidden
+type: dynamic
+value: 500
+version: '0.1'
