@@ -1,0 +1,10 @@
+version: "3.7"
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: docker_misc
+    restart: always
+    ports:
+      - "5000:5000"
