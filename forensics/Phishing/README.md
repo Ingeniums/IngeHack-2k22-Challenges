@@ -4,7 +4,7 @@
 
 ## Description
 
-Hello, our internal security team believe that we have been a victim of a phishing compaign but couldn't figure out what the threat actors were trying to steal. The word document below was an email attachment used among to get into our coporate network.
+Hello, our internal security team believe that we have been a victim of a phishing compaign but couldn't figure out what the threat actors were trying to steal. The word document below was an email attachment used among others to get into our coporate network.
 
 ## Solution
 
