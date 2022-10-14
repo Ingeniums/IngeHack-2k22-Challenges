@@ -3,7 +3,9 @@ ARG DEBIAN_FRONTEND=noninteractive
 ENV TZ=UTC
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-RUN apt-get upgrade && apt-get update -y && apt-get install -y --no-install-recommends ca-certificates \
+RUN sed -i -re 's/([a-z]{2}\.)?archive.ubuntu.com|security.ubuntu.com/old-releases.ubuntu.com/g' /etc/apt/sources.list
+
+RUN apt-get update -y && apt-get upgrade -y && apt-get install -y --no-install-recommends ca-certificates \
     apt-transport-https \
     software-properties-common \
     locales 
@@ -20,6 +22,7 @@ RUN apt-get update; \
     php \
     libapache2-mod-php8.0 \
     curl \
+    apache2 \
     && rm -rf /var/lib/apt/lists/*
 
 RUN php -v
@@ -37,6 +40,7 @@ RUN echo 'extension=/app/inge_gateway/target/release/libinge_gateway.so' >> $(ph
 RUN echo 'extension=/app/inge_gateway/target/release/libinge_gateway.so' >> /etc/php/8.0/apache2/php.ini
 RUN php -m
 # COPY app/inge_gateway/target/release/libinge_gateway.so /dev/php/modules/
-# COPY app/server/index.php /var/www/html/
-
-# RUN chmod 755 /var/www/html/index.php
+COPY app/server/index.php /var/www/html/
+RUN rm -rf /app/inge_gateway/src/lib.rs
+EXPOSE 80
+CMD apachectl -D FOREGROUND
