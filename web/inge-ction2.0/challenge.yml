@@ -1,34 +1,43 @@
-name: ingection2
 author: vvxhid
 author_link: author_link
 category: web
+connection_info: http://ingection2.chal.ctf.ingeniums.club
+deployment:
+  autoban: true
+  containerPort: 5000
+  deployed: true
+  dockerImage: ingection2
+  dockerRepository: gcr.io/ingehack-2022
+  egress: deny
+  healthCheck:
+    initialDelaySeconds: 10
+    periodSeconds: 30
+  limits:
+    cpu: 200m
+    memory: 500Mi
+  name: ingection2
+  nodePort: 30601
+  other:
+    podAnnotations: {}
+  replicasNumber: 2
+  requests:
+    cpu: 100m
+    memory: 200Mi
+  type: http
+description: "> A simple app to POST feedbacks.  \n**Author** : vvxhid\n"
 difficulty: medium
-
-description: |
-  > A simple app to POST feedbacks.  
-  **Author** : vvxhid
+extra:
+  decay: 50
+  initial: 500
+  minimum: 50
+files:
+- files/app.py
 flags:
-  - IngeHack{Sql1t3_Bl00b_FTW#1337$}
-
+- IngeHack{Sql1t3_Bl00b_FTW#1337$}
+name: ingection2
+state: hidden
+tags:
+- web
 type: dynamic
 value: 500
-extra:
-    initial: 500
-    decay: ${DECAY} # leave it like this
-    minimum: 50
-
-image: image
-
-connection_info: connection_info
-
-tags:
-  - web
-
-files:
-  - files/app.py
-
-# DO NOT CHANGE
-
-state: hidden
-
-version: "0.1"
+version: '0.1'

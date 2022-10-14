@@ -1,7 +1,7 @@
 FROM python
 
 RUN pip install fastapi uvicorn
-RUN adduser -D ingehack
+RUN useradd -ms /bin/bash  ingehack
 COPY ./app /home/ingehack/app
 RUN chown -R ingehack:root /home/ingehack/app
 
