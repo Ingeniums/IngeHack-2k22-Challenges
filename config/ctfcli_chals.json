@@ -19,5 +19,8 @@
     "forensics/Phishing",
     "forensics/Malware",
     "misc/sus_media",
-    "reverse/ez_rev"
+    "reverse/ez_rev",
+    "crypto/ti-al-as",
+    "web/bun",
+    "web/werev"
 ]

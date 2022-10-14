@@ -1,25 +1,49 @@
 author: vvxhid
 author_link: https://twitter.com/vvxhid1
 category: web
-connection_info: todo
-description: |
-  > Extend php to do something.
+connection_info: http://werev.chal.ctf.ingeniums.club
+deployment:
+  autoban: false
+  containerPort: 80
+  deployed: true
+  dockerImage: werev
+  dockerRepository: gcr.io/ingehack-2022
+  egress: allow
+  healthCheck:
+    initialDelaySeconds: 10
+    periodSeconds: 30
+  limits:
+    cpu: 200m
+    memory: 500Mi
+  name: werev
+  nodePort: 30605
+  other:
+    podAnnotations: {}
+  replicasNumber: 2
+  requests:
+    cpu: 100m
+    memory: 200Mi
+  type: http
+description: '> Extend php to do something.
+
   **Author** : vvxhid / yalatr3ch3
+
+  '
 difficulty: medium
 extra:
   decay: 50
   initial: 500
   minimum: 50
 files:
-  - app/server/index.php
+- app/server/index.php
 flags:
-  - IngeHack{r3v3rs3_th3_W33b_w1th_php}
-image: todo
-name: todo
+- IngeHack{r3v3rs3_th3_W33b_w1th_php}
+image: werev
+name: werev
 state: hidden
 topics:
-  - web
-  - reverse
+- web
+- reverse
 type: dynamic
 value: 500
 version: '0.1'

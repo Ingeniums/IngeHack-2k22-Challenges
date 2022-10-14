@@ -59,6 +59,16 @@
         "nodeport": 30600,
         "port": 1600
     },
+    "redis-store": {
+        "name": "redis-store",
+        "subdomain": "redis-store",
+        "type": "http",
+        "category": "web",
+        "autoban": false,
+        "path": "web/redis-store",
+        "nodeport": 30602,
+        "port": 1602
+    },
     "ingection2": {
         "name": "ingection2",
         "subdomain": "ingection2",
@@ -69,14 +79,24 @@
         "nodeport": 30601,
         "port": 1601
     },
-    "redis-store": {
-        "name": "redis-store",
-        "subdomain": "redis-store",
+    "bun": {
+        "name": "bun",
+        "subdomain": "bun",
         "type": "http",
         "category": "web",
         "autoban": false,
-        "path": "web/redis-store",
-        "nodeport": 30602,
-        "port": 1602
+        "path": "web/bun",
+        "nodeport": 30604,
+        "port": 1604
+    },
+    "werev": {
+        "name": "werev",
+        "subdomain": "werev",
+        "type": "http",
+        "category": "web",
+        "autoban": false,
+        "path": "web/werev",
+        "nodeport": 30605,
+        "port": 1605
     }
 }
