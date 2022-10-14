@@ -17,6 +17,9 @@ const generateOtp = (username) =>
 
 const encodeString = (str) => createHash("md5").update(str).digest("base64");
 
+
+app.get('/', (req,res)=> res.json({'message':'success'}));
+
 app.get("/get*", (req, res) =>
   res.json(
     Array.from(STORE).map(([k, v]) => {

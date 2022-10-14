@@ -19,7 +19,7 @@ deployment:
   nodePort: 30601
   other:
     podAnnotations: {}
-  replicasNumber: 6
+  replicasNumber: 2
   requests:
     cpu: 100m
     memory: 200Mi
