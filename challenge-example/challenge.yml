@@ -55,13 +55,13 @@ image: gcr.io/ingehack-2022/{challenge_name}
 # Optional settings
 
 # connection_info is used to provide a link, hostname, or instructions on how to connect to a challenge
-# 1. For http challenges: http://{challenge_name}.chal.ctf.gdgalgiers.com
-# 2. For nc challenges (leave ${PORT} as is): nc -v {category}.chal.ctf.gdgalgiers.com ${PORT}
-# 3. For ssh challenges (leave ${PORT} as is): ssh -p ${PORT} {user}@{category}.chal.ctf.gdgalgiers.com
+# 1. For http challenges: http://{challenge_name}.chal.ctf.ingeniums.club
+# 2. For nc challenges (leave ${PORT} as is): nc -v {category}.chal.ctf.ingeniums.club ${PORT}
+# 3. For ssh challenges (leave ${PORT} as is): ssh -p ${PORT} {user}@{category}.chal.ctf.ingeniums.club
 # 4. For per team docker challenges (leave ${INSTANCE_PORT} as is):
-#    4.1 http: http://inst.ctf.gdgalgiers.com:${INSTANCE_PORT}
-#    4.2 nc: nc -v inst.ctf.gdgalgiers.com ${INSTANCE_PORT}
-#    4.3 ssh: ssh -p ${INSTANCE_PORT} {user}@inst.ctf.gdgalgiers.com
+#    4.1 http: http://inst.ctf.ingeniums.club:${INSTANCE_PORT}
+#    4.2 nc: nc -v inst.ctf.ingeniums.club ${INSTANCE_PORT}
+#    4.3 ssh: ssh -p ${INSTANCE_PORT} {user}@inst.ctf.ingeniums.club
 # 5. For offline challenges: remove connection_info
 connection_info: connection_info
 

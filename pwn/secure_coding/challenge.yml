@@ -1,0 +1,46 @@
+author: Scorpion197
+author_link: https://github.com/Scorpion197
+category: pwn
+connection_info: nc -v pwn.chal.ctf.ingeniums.club 1401
+deployment:
+  autoban: true
+  containerPort: 9001
+  deployed: true
+  dockerImage: secure-coding
+  dockerRepository: gcr.io/ingehack-2022
+  egress: deny
+  healthCheck:
+    initialDelaySeconds: 10
+    periodSeconds: 30
+  limits:
+    cpu: 200m
+    memory: 500Mi
+  name: secure-coding
+  nodePort: 30401
+  other:
+    podAnnotations: {}
+  replicasNumber: 2
+  requests:
+    cpu: 100m
+    memory: 200Mi
+  type: tcp
+description: '> Some checks are always mandatory right?
+
+  '
+difficulty: medium
+extra:
+  decay: 50
+  initial: 500
+  minimum: 50
+files:
+- ./dist/dist.zip
+flags:
+- IngeHack{alw4y$_ch3ck_r3turn_v4l3u_0f_ca110c}
+image: secure_coding
+name: Secure Coding
+state: hidden
+tags:
+- pwn
+type: dynamic
+value: 500
+version: '0.1'

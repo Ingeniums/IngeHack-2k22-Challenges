@@ -1,0 +1,55 @@
+author: vvxhid
+author_link: https://github.com/vvxhid
+category: web
+connection_info: http://clear.chal.ctf.ingeniums.club
+deployment:
+  additionalContainers:
+  - containerPort: 5000
+    deployed: false
+    dockerImage: clear-nginx
+    dockerRepository: gcr.io/ingehack-2022
+    healthCheck:
+      initialDelaySeconds: 10
+      periodSeconds: 30
+    name: clear-nginx
+    resources:
+      limits:
+        cpu: 200m
+        memory: 200Mi
+      requests:
+        cpu: 50m
+        memory: 50Mi
+    type: http
+  autoban: true
+  containerPort: 443
+  deployed: true
+  dockerImage: clear
+  dockerRepository: gcr.io/ingehack-2022
+  egress: allow
+  hostAlias: clear
+  limits:
+    cpu: 400m
+    memory: 500Mi
+  name: clear
+  nodePort: 30603
+  replicasNumber: 2
+  requests:
+    cpu: 50m
+    memory: 50Mi
+  type: http
+description: "> HTTP2 is here, let's sneak!  \n**Author** : vvxhid\n"
+difficulty: medium
+extra:
+  decay: 50
+  initial: 500
+  minimum: 50
+flags:
+- IngeHack{cl34rt3xt_4nd_r3v3rse_pr0xy_byp4ss}
+image: clear
+name: clear
+state: hidden
+tags:
+- web
+type: dynamic
+value: 500
+version: '0.1'

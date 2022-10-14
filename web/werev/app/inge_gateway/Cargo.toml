@@ -1,0 +1,11 @@
+[package]
+name = "inge_gateway"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+ext-php-rs = "*"
+secstr = "0.5.0"
+
+[lib]
+crate-type = ["cdylib"]

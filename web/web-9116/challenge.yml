@@ -1,0 +1,43 @@
+author: vvxhid
+author_link: twitter.com/vxxhid1
+category: web
+connection_info: http://web-9116.chal.ctf.ingeniums.club
+deployment:
+  autoban: true
+  containerPort: 5000
+  deployed: true
+  dockerImage: web-9116
+  dockerRepository: gcr.io/ingehack-2022
+  egress: allow
+  healthCheck:
+    initialDelaySeconds: 10
+    periodSeconds: 30
+  limits:
+    cpu: 200m
+    memory: 500Mi
+  name: web-9116
+  nodePort: 30600
+  other:
+    podAnnotations: {}
+  replicasNumber: 2
+  requests:
+    cpu: 100m
+    memory: 200Mi
+  type: http
+description: '> call 9116
+
+  **Author** : vvxhid
+
+  '
+difficulty: easy
+extra:
+  decay: 50
+  initial: 500
+  minimum: 50
+flags:
+- IngeHack{securityFTW}
+name: web-9116
+state: hidden
+type: dynamic
+value: 500
+version: '0.1'

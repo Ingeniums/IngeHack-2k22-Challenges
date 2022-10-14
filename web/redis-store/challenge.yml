@@ -1,0 +1,43 @@
+author: vvxhid
+author_link: https://twitter.com/vvxhid1
+category: web
+connection_info: http://redis-store.chal.ctf.ingeniums.club
+deployment:
+  autoban: true
+  containerPort: 3000
+  deployed: true
+  dockerImage: redis-store
+  dockerRepository: gcr.io/ingehack-2022
+  egress: deny
+  healthCheck:
+    initialDelaySeconds: 10
+    periodSeconds: 30
+  limits:
+    cpu: 200m
+    memory: 500Mi
+  name: redis-store
+  nodePort: 30602
+  other:
+    podAnnotations: {}
+  replicasNumber: 2
+  requests:
+    cpu: 100m
+    memory: 200Mi
+  type: http
+description: "> Checkout my redis store. \n\n**Author** : vvxhid\n"
+difficulty: medium
+extra:
+  decay: 50
+  initial: 500
+  minimum: 50
+files:
+- files/server.js
+flags:
+- IngeHack{4lw4ys-w1th-pr0t0-72187312}
+name: redis-store
+state: hidden
+topics:
+- web
+type: dynamic
+value: 500
+version: '0.1'

@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+    quart:
+        build:
+            context: .
+            dockerfile: ./Dockerfile
+        expose:
+            - 5000
+        ports:
+            - "5000:80"
+    nginx:
+        image: nginx:latest
+        expose:
+            - 443
+        ports:
+            - "1337:443"
+        volumes:
+            - ./nginx/nginx.conf:/etc/nginx/conf.d/vhost.conf:ro
+            - ./nginx/key.pem:/tmp/key.pem
+            - ./nginx/cert.pem:/tmp/cert.pem
+        links:
+            - quart

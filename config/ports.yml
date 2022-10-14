@@ -1,7 +1,7 @@
 crypto: 1000
+forensics: 1100
 jail: 1300
-fore: 1100
 misc: 1200
-pwn: 1400
+pwn: 1403
 reverse: 1500
-web: 1600
+web: 1604

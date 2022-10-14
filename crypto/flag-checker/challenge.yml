@@ -1,0 +1,89 @@
+# NOTE: carefully read the comments
+# NOTE: change all that's between {} unless specified otherwise
+#
+# This file represents the base specification of your challenge. It is used by
+# other tools to install and deploy your challenge.
+
+# Required sections
+#
+name: flag-checker
+author: akram09
+# Author website or Github link
+author_link: https://github.com/akram09
+
+# Challenge category (pwn, web, reverse, crypto, misc, linux)
+category: crypto 
+# Challenge difficulty (easy, ezmed, medium, medhard, hard, extreme)
+difficulty: ezmed
+
+# Challenge description goes here
+# You can write markdown in it
+# Notes:
+# - for multi-line descriptions, make sure to add 2 spaces at the end of each line so that descriptions are actually displayed in multiple lines
+# - make sure to prepend the description with ">"
+# - always add the author line in the description (because CTFd doesn't add the author in the challenge description)
+description: |
+  > We have made a flag checker so that we dont forget 
+  > our flags, make sure to use it !
+
+  **Author** : akram09
+flags:
+  # The flag should match this pattern: ^CyberErudites{[A-Za-z0-9_@><:\.\-\+\$#!]{12,}}$
+  # 1. It can have any alphanumeric characters in addition of the following
+  #    special characters (separated by comma): _, @, >, <, :, ., -, +, $, #, !
+  # 2. The string inside the flag format should be at least 12 characters long and
+  #    hard to guess.
+  - IngeHack{W3ll_d0n3_detective_y0u_4r3_n0w_pr0mot3d}
+
+# Challenge type and points
+# For regular challenges leave like this:
+type: dynamic
+value: 500
+extra:
+    initial: 500
+    decay: ${DECAY} # leave it like this
+    minimum: 50
+# For per team docker challenges
+# type: docker
+# value: 500
+
+# Settings used for Dockerfile deployment
+# If not used, remove or set to null
+
+# Optional settings
+
+# connection_info is used to provide a link, hostname, or instructions on how to connect to a challenge
+# 1. For http challenges: http://{challenge_name}.chal.ctf.gdgalgiers.com
+# 2. For nc challenges (leave ${PORT} as is): nc -v {category}.chal.ctf.gdgalgiers.com ${PORT}
+# 3. For ssh challenges (leave ${PORT} as is): ssh -p ${PORT} {user}@{category}.chal.ctf.gdgalgiers.com
+# 4. For per team docker challenges (leave ${INSTANCE_PORT} as is):
+#    4.1 http: http://inst.ctf.gdgalgiers.com:${INSTANCE_PORT}
+#    4.2 nc: nc -v inst.ctf.gdgalgiers.com ${INSTANCE_PORT}
+#    4.3 ssh: ssh -p ${INSTANCE_PORT} {user}@inst.ctf.gdgalgiers.com
+# 5. For offline challenges: remove connection_info
+
+# Topics are used to help tell what techniques/information a challenge involves
+# They are generally only visible to admins
+# Accepts strings
+topics:
+  - crypto
+  - reverse engineering 
+
+# Tags are used to provide additional public tagging to a challenge
+# Can be removed if unused
+# Accepts strings
+tags:
+  - crypto 
+
+# Files to be uploaded alongside the challenge in CTFd
+# These paths are relative to the same directory where the challenge.yml file is.
+files:
+  - challenge/main.go 
+    
+
+# DO NOT CHANGE
+
+state: hidden
+
+version: "0.1"
+

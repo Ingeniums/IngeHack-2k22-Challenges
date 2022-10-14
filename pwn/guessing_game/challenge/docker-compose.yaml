@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  game:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "9003:9003"

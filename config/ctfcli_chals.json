@@ -1,2 +1,10 @@
 [
+    "pwn/warmup",
+    "pwn/secure_coding",
+    "pwn/guessing_game",
+    "web/9116",
+    "web/inge-ction2.0",
+    "web/redis-store",
+    "web/web-9116",
+    "web/clear"
 ]
