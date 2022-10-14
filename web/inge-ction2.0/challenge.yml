@@ -3,12 +3,12 @@ author_link: author_link
 category: web
 connection_info: http://ingection2.chal.ctf.ingeniums.club
 deployment:
-  autoban: true
+  autoban: false
   containerPort: 5000
   deployed: true
   dockerImage: ingection2
   dockerRepository: gcr.io/ingehack-2022
-  egress: deny
+  egress: allow
   healthCheck:
     initialDelaySeconds: 10
     periodSeconds: 30
