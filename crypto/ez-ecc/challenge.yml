@@ -1,120 +1,52 @@
-# NOTE: carefully read the comments
-# NOTE: change all that's between {} unless specified otherwise
-#
-# This file represents the base specification of your challenge. It is used by
-# other tools to install and deploy your challenge.
-
-# Required sections
-#
-name: ez-ecc
 author: akram09
-# Author website or Github link
 author_link: https://github.com/akram09
-
-# Challenge category (pwn, web, reverse, crypto, misc, linux)
 category: crypto
-# Challenge difficulty (easy, ezmed, medium, medhard, hard, extreme)
-difficulty: medium
-
-# Challenge description goes here
-# You can write markdown in it
-# Notes:
-# - for multi-line descriptions, make sure to add 2 spaces at the end of each line so that descriptions are actually displayed in multiple lines
-# - make sure to prepend the description with ">"
-# - always add the author line in the description (because CTFd doesn't add the author in the challenge description)
-description: |
-  > You want to join us ? prove yourself and
-  > pass the interview
-
-  **Author** : akram09
-flags:
-  # The flag should match this pattern: ^CyberErudites{[A-Za-z0-9_@><:\.\-\+\$#!]{12,}}$
-  # 1. It can have any alphanumeric characters in addition of the following
-  #    special characters (separated by comma): _, @, >, <, :, ., -, +, $, #, !
-  # 2. The string inside the flag format should be at least 12 characters long and
-  #    hard to guess.
-  - IngeHack{Y0u_4r3_H1R3ED_W1TH_U5}
-
-# Challenge type and points
-# For regular challenges leave like this:
-type: dynamic
-value: 500
-extra:
-    initial: 500
-    decay: ${DECAY} # leave it like this
-    minimum: 50
-# For per team docker challenges
-# type: docker
-# value: 500
-
-# Settings used for Dockerfile deployment
-# If not used, remove or set to null
-image: gcr.io/ingehack-2022/{challenge_name}
-
-# Optional settings
-
-# connection_info is used to provide a link, hostname, or instructions on how to connect to a challenge
-# 1. For http challenges: http://{challenge_name}.chal.ctf.gdgalgiers.com
-# 2. For nc challenges (leave ${PORT} as is): nc -v {category}.chal.ctf.gdgalgiers.com ${PORT}
-# 3. For ssh challenges (leave ${PORT} as is): ssh -p ${PORT} {user}@{category}.chal.ctf.gdgalgiers.com
-# 4. For per team docker challenges (leave ${INSTANCE_PORT} as is):
-#    4.1 http: http://inst.ctf.gdgalgiers.com:${INSTANCE_PORT}
-#    4.2 nc: nc -v inst.ctf.gdgalgiers.com ${INSTANCE_PORT}
-#    4.3 ssh: ssh -p ${INSTANCE_PORT} {user}@inst.ctf.gdgalgiers.com
-# 5. For offline challenges: remove connection_info
-connection_info: connection_info
-
-# Topics are used to help tell what techniques/information a challenge involves
-# They are generally only visible to admins
-# Accepts strings
-topics:
-  - crypto
-  - elliptic curve
-
-# Tags are used to provide additional public tagging to a challenge
-# Can be removed if unused
-# Accepts strings
-tags:
-  - crypto
-
-# Files to be uploaded alongside the challenge in CTFd
-# These paths are relative to the same directory where the challenge.yml file is.
-
-# DO NOT CHANGE
-
-state: hidden
-
-version: "0.1"
-
+connection_info: nc -v crypto.chal.ctf.ingeniums.club 1000
 deployment:
-  # Temporary auto IP ban when detecting abuse
   autoban: false
-  # Allow/Deny egress (outcoming) traffic from pod
-  # "allow" -> Allow outcoming traffic
-  # "deny" -> Deny outcoming traffic
-  egress: "allow"
-  # This stores the challenge name but in an acceptable format for deployment
-  # Regex for the name is [a-z0-9]+(-)*[a-z0-9]*
-  name: challenge-name
-  # The state of deployment of challenge (either false or true)
-  deployed: false
-  replicasNumber: 1
-  # Type of the challenge either tcp or http 
-  type: http 
+  containerPort: 1337
+  deployed: true
+  dockerImage: ez-ecc
   dockerRepository: gcr.io/ingehack-2022
-  dockerImage: challenge-name
-  # If the challenge don't expose any port then leave it empty
-  containerPort: 80
-  limits:
-    cpu: 200m
-    memory: 500Mi 
-  requests:
-    cpu: 100m
-    memory: 200Mi 
+  egress: allow
   healthCheck:
     initialDelaySeconds: 10
     periodSeconds: 30
-  other: 
-    # parameters of pod annotations 
+  limits:
+    cpu: 200m
+    memory: 500Mi
+  name: ez-ecc
+  nodePort: 30000
+  other:
     podAnnotations: {}
+  replicasNumber: 2
+  requests:
+    cpu: 100m
+    memory: 200Mi
+  type: tcp
+description: '> You want to join us ? prove yourself and
 
+  > pass the interview
+
+
+  **Author** : akram09
+
+  '
+difficulty: medium
+extra:
+  decay: 50
+  initial: 500
+  minimum: 50
+flags:
+- IngeHack{Y0u_4r3_H1R3ED_W1TH_U5}
+image: gcr.io/ingehack-2022/ez-ecc
+name: ez-ecc
+state: hidden
+tags:
+- crypto
+topics:
+- crypto
+- elliptic curve
+type: dynamic
+value: 500
+version: '0.1'

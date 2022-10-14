@@ -6,5 +6,13 @@
     "web/inge-ction2.0",
     "web/redis-store",
     "web/web-9116",
-    "web/clear"
+    "web/clear",
+    "crypto/encoding",
+    "crypto/ez-ecc",
+    "crypto/flag-checker",
+    "misc/art",
+    "misc/environ",
+    "misc/file-struct",
+    "reverse/multiverse_of_madness",
+    "reverse/rustomware"
 ]

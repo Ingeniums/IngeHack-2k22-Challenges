@@ -1,35 +1,49 @@
-name: environ
 author: vvxhid
-author_link: author_link
+author_link: https://github.com/vvxhid
 category: misc
-difficulty: medium
+connection_info: nc -v misc.chal.ctf.ingeniums.club 1200
+deployment:
+  autoban: true
+  containerPort: 9999
+  deployed: true
+  dockerImage: environ
+  dockerRepository: gcr.io/ingehack-2022
+  egress: allow
+  healthCheck:
+    initialDelaySeconds: 10
+    periodSeconds: 30
+  limits:
+    cpu: 200m
+    memory: 500Mi
+  name: environ
+  nodePort: 30200
+  other:
+    podAnnotations: {}
+  replicasNumber: 2
+  requests:
+    cpu: 100m
+    memory: 200Mi
+  type: tcp
+description: '> Another python jail
 
-description: |
-  > Another python jail
   **Author** : vvxhid
-flags:
-  - IngeHack{help()_r34ally_h3lp_;)}
 
-type: dynamic
-value: 500
+  '
+difficulty: medium
 extra:
-    initial: 500
-    decay: ${DECAY} # leave it like this
-    minimum: 50
-
-image: image
-
-connection_info: connection_info
-
-tags:
-  - misc
-  - jail
-
+  decay: 50
+  initial: 500
+  minimum: 50
 files:
 - files/main.py
-
-# DO NOT CHANGE
-
+flags:
+- IngeHack{help()_r34ally_h3lp_;)}
+image: image
+name: environ
 state: hidden
-
-version: "0.1"
+tags:
+- misc
+- jail
+type: dynamic
+value: 500
+version: '0.1'

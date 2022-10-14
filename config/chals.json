@@ -68,5 +68,25 @@
         "path": "web/clear",
         "nodeport": 30603,
         "port": 1603
+    },
+    "ez-ecc": {
+        "name": "ez-ecc",
+        "subdomain": "ez-ecc",
+        "type": "tcp",
+        "category": "crypto",
+        "autoban": false,
+        "path": "crypto/ez-ecc",
+        "nodeport": 30000,
+        "port": 1000
+    },
+    "environ": {
+        "name": "environ",
+        "subdomain": "environ",
+        "type": "tcp",
+        "category": "misc",
+        "autoban": true,
+        "path": "misc/environ",
+        "nodeport": 30200,
+        "port": 1200
     }
 }

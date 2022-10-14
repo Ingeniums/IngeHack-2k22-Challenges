@@ -1,39 +1,25 @@
-
-name: multiverse_of_madness
 author: yalatr3ch3
 author_link: https://github.com/Yassine-Latreche
-
 category: reverse
+description: "> Another CTF and another Marvel themed challenge.  \n> This time, Scarlet\
+  \ Witch destroyed the book of the Vishanti.  \n> Can you recover it ?\n\n**Author**\
+  \ : @yalatreche\n"
 difficulty: medium
-
-description: |
-  > Another CTF and another Marvel themed challenge.  
-  > This time, Scarlet Witch destroyed the book of the Vishanti.  
-  > Can you recover it ?
-  
-  **Author** : @yalatreche
+extra:
+  decay: 50
+  initial: 500
+  minimum: 50
+files:
+- files/multiverse_of_madness
+- files/flag.enc
 flags:
-  - IngeHack{7h1ngs_ju57_90t_0UT_0f_H4aAand}
-
+- IngeHack{7h1ngs_ju57_90t_0UT_0f_H4aAand}
+name: multiverse_of_madness
+state: hidden
+tags:
+- reverse
+topics:
+- reverse
 type: dynamic
 value: 500
-extra:
-    initial: 500
-    decay: ${DECAY} # leave it like this
-    minimum: 50
-
-topics:
- - reverse
-
-tags:
-  - reverse
-
-files:
-  - files/multiverse_of_madness
-  - files/flag.enc
-
-# DO NOT CHANGE
-
-state: hidden
-
-version: "0.1"
+version: '0.1'

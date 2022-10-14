@@ -49,7 +49,6 @@ extra:
 
 # Settings used for Dockerfile deployment
 # If not used, remove or set to null
-image: gcr.io/gdg-ctf-2022/{challenge_name}
 
 # Optional settings
 
@@ -74,14 +73,13 @@ topics:
 # Accepts strings
 tags:
   - crypto 
-  - ezmed
 
 # Files to be uploaded alongside the challenge in CTFd
 # These paths are relative to the same directory where the challenge.yml file is.
 files:
   - challenge/server.py
   - challenge/client.py
-  - challenge/output.py
+  - challenge/output.pcap
 
 # DO NOT CHANGE
 
