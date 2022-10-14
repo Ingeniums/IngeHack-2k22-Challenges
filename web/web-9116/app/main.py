@@ -3,6 +3,10 @@ import uvicorn
 app = FastAPI()
 
 
+@app.trace('/')
+async def root():
+    return {"message": "call 911"}
+
 @app.get('/')
 async def root():
     return {"message": "call 911"}

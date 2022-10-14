@@ -47,7 +47,7 @@ func validate_last(flag string) bool {
 		temp = append(temp, lookup_map[k]+strconv.Itoa(k))
 	}
 	fmt.Println(temp)
-	secret := "bnYxLmVfMy5hMDUua183LldyOS5sXzExLl8wMTMuMF8xNS4zcjE3LmRtMTkudHQyMS5jZDIz"
+	secret := "SXQwLmd2Mi5IXzQuYzA2LntfOC4zcjEwLmxfMTIuZDAxNC5uXzE2Ll9yMTguZW0yMC5ldDIyLnRkMjQ="
 	b64Enc := b64.StdEncoding.EncodeToString([]byte(strings.Join(temp, ".")))
 	fmt.Println(b64Enc)
 	if b64Enc != secret {

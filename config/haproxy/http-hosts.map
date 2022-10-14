@@ -1,5 +1,4 @@
 #domainname     backendname
-clear.chal.ctf.ingeniums.club    be_clear
-ingection2.chal.ctf.ingeniums.club    be_ingection2
-redis-store.chal.ctf.ingeniums.club    be_redis-store
 web-9116.chal.ctf.ingeniums.club    be_web-9116
+redis-store.chal.ctf.ingeniums.club    be_redis-store
+ingection2.chal.ctf.ingeniums.club    be_ingection2

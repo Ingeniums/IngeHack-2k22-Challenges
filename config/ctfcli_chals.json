@@ -18,5 +18,6 @@
     "forensics/IP_Theft",
     "forensics/Phishing",
     "forensics/Malware",
-    "misc/sus_media"
+    "misc/sus_media",
+    "reverse/ez_rev"
 ]

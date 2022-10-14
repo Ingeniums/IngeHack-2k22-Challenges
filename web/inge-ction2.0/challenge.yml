@@ -13,13 +13,13 @@ deployment:
     initialDelaySeconds: 10
     periodSeconds: 30
   limits:
-    cpu: 200m
+    cpu: 300m
     memory: 500Mi
   name: ingection2
   nodePort: 30601
   other:
     podAnnotations: {}
-  replicasNumber: 2
+  replicasNumber: 6
   requests:
     cpu: 100m
     memory: 200Mi
@@ -35,7 +35,7 @@ files:
 flags:
 - IngeHack{Sql1t3_Bl00b_FTW#1337$}
 name: ingection2
-state: hidden
+state: visible
 tags:
 - web
 type: dynamic

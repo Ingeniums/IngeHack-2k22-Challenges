@@ -29,16 +29,6 @@
         "nodeport": 30401,
         "port": 1401
     },
-    "clear": {
-        "name": "clear",
-        "subdomain": "clear",
-        "type": "http",
-        "category": "web",
-        "autoban": true,
-        "path": "web/clear",
-        "nodeport": 30603,
-        "port": 1603
-    },
     "ez-ecc": {
         "name": "ez-ecc",
         "subdomain": "ez-ecc",
@@ -59,15 +49,15 @@
         "nodeport": 30200,
         "port": 1200
     },
-    "ingection2": {
-        "name": "ingection2",
-        "subdomain": "ingection2",
+    "web-9116": {
+        "name": "web-9116",
+        "subdomain": "web-9116",
         "type": "http",
         "category": "web",
         "autoban": false,
-        "path": "web/inge-ction2.0",
-        "nodeport": 30601,
-        "port": 1601
+        "path": "web/web-9116",
+        "nodeport": 30600,
+        "port": 1600
     },
     "redis-store": {
         "name": "redis-store",
@@ -79,14 +69,14 @@
         "nodeport": 30602,
         "port": 1602
     },
-    "web-9116": {
-        "name": "web-9116",
-        "subdomain": "web-9116",
+    "ingection2": {
+        "name": "ingection2",
+        "subdomain": "ingection2",
         "type": "http",
         "category": "web",
         "autoban": false,
-        "path": "web/web-9116",
-        "nodeport": 30600,
-        "port": 1600
+        "path": "web/inge-ction2.0",
+        "nodeport": 30601,
+        "port": 1601
     }
 }

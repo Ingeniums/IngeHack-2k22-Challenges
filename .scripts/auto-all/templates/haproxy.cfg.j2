@@ -88,11 +88,11 @@ frontend http
   tcp-request connection reject if { src -f /etc/haproxy/blacklist.lst }
 
   # Automatic temporary IP ban
-  stick-table type ip size 1m expire {{ CONN_RATE_SECONDS }}s store conn_rate({{ CONN_RATE_SECONDS }}s),conn_cur
-  tcp-request connection reject if { src_get_gpc0(ip_blacklist) gt 0 }
-  tcp-request connection track-sc0 src
-  tcp-request connection track-sc1 src table ip_blacklist
-  tcp-request connection sc-inc-gpc0(1) if { sc0_conn_rate gt {{ CONNS_PER_RATE }} } or { sc0_conn_cur gt {{ CONCUR_CONNS }} }
+  # stick-table type ip size 1m expire {{ CONN_RATE_SECONDS }}s store conn_rate({{ CONN_RATE_SECONDS }}s),conn_cur
+  # tcp-request connection reject if { src_get_gpc0(ip_blacklist) gt 0 }
+  # tcp-request connection track-sc0 src
+  # tcp-request connection track-sc1 src table ip_blacklist
+  # tcp-request connection sc-inc-gpc0(1) if { sc0_conn_rate gt {{ CONNS_PER_RATE }} } or { sc0_conn_cur gt {{ CONCUR_CONNS }} }
 
   bind *:80
   use_backend %[req.hdr(host),lower,map_dom({{ HTTP_HOSTS_MAP_PATH }})]
@@ -140,7 +140,7 @@ defaults
 {% for chal in challenges %}
 {% if chal["type"] == HTTP_TYPE %}
 backend be_{{ chal["name"] }}
-  server-template node {{ MAX_NODES }} {{ NODES_FQDN }}:{{ chal["nodeport"] }} check resolvers nameservers init-addr libc,none
+  server-template node {{ MAX_NODES }} {{ NODES_FQDN }}:{{ chal["nodeport"] }} resolvers nameservers init-addr libc,none
 {% endif %}
 {% endfor %}
 

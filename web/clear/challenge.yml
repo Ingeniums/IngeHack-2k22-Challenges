@@ -22,7 +22,7 @@ deployment:
     type: http
   autoban: true
   containerPort: 443
-  deployed: true
+  deployed: false
   dockerImage: clear
   dockerRepository: gcr.io/ingehack-2022
   egress: allow
