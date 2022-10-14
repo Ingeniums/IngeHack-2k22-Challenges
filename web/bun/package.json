@@ -1,0 +1,11 @@
+{
+  "name": "bun",
+  "module": "index.js",
+  "type": "module",
+  "devDependencies": {
+    "bun-types": "^0.1.0"
+  },
+  "dependencies": {
+    "qs": "^6.11.0"
+  }
+}
