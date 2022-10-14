@@ -22,8 +22,8 @@ extra:
     minimum: 50
 
 files:
-  - files/rustomware
-  - files/flag.txt.encrypted
+  - dist/rustomware
+  - dist/flag.txt.encrypted
 
 state: hidden
 
