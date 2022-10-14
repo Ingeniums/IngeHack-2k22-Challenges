@@ -1,27 +1,22 @@
-name: sus_media
 author: team7seven
 category: misc
-difficulty: easy
+description: '> We clearly don''t have anything suspicious in one of our team members
+  social media
 
-description: |
-  > We clearly don't have anything suspicious in one of our team members social media
   **Author** : team7seven
-flags:
-  - IngeHack{D15C0rd_pr0f1l3_p1c7ur3_g035_brrrrrrrrrr_xD}
 
+  '
+difficulty: easy
+extra:
+  decay: 50
+  initial: 500
+  minimum: 50
+flags:
+- IngeHack{D15C0rd_pr0f1l3_p1c7ur3_g035_brrrrrrrrrr_xD}
+name: sus_media
+state: hidden
+tags:
+- osint
 type: dynamic
 value: 500
-extra:
-    initial: 500
-    decay: ${DECAY} # leave it like this
-    minimum: 50
-
-
-tags:
-  - osint
-
-# DO NOT CHANGE
-
-state: hidden
-
-version: "0.1"
+version: '0.1'

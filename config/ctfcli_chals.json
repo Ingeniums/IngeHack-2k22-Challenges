@@ -16,5 +16,7 @@
     "reverse/multiverse_of_madness",
     "reverse/rustomware",
     "forensics/IP_Theft",
-    "forensics/Phishing"
+    "forensics/Phishing",
+    "forensics/Malware",
+    "misc/sus_media"
 ]
