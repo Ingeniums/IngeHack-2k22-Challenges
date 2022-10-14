@@ -14,5 +14,7 @@
     "misc/environ",
     "misc/file-struct",
     "reverse/multiverse_of_madness",
-    "reverse/rustomware"
+    "reverse/rustomware",
+    "forensics/IP_Theft",
+    "forensics/Phishing"
 ]
