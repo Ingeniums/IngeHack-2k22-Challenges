@@ -1,0 +1,29 @@
+name: yassine_corp_1
+author: Fa2y
+author_link: https://github.com/Fa2y
+
+category: forensics
+difficulty: medium
+
+description: |
+  > In today's penetration test, the team have captured what they believe to be an intresting data.  
+  > Can you figure out the content of the capture ?
+
+  **Author** : @Fa2y
+
+flags:
+  - IngeHack{s_1n_WPA2_5t4nDs_f0R_S3Cur1ty}
+
+type: dynamic
+value: 500
+extra:
+    initial: 500
+    decay: ${DECAY}
+    minimum: 50
+
+files:
+  - files/capture.cap
+
+state: hidden
+
+version: "0.1"
