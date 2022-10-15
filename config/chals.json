@@ -98,5 +98,15 @@
         "path": "web/werev",
         "nodeport": 30605,
         "port": 1605
+    },
+    "docker-disco": {
+        "name": "docker-disco",
+        "subdomain": "docker-disco",
+        "type": "http",
+        "category": "misc",
+        "autoban": false,
+        "path": "misc/docker-disco",
+        "nodeport": 30201,
+        "port": 1201
     }
 }

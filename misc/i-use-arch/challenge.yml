@@ -1,0 +1,19 @@
+author: vvxhid, yalatr3ch3
+author_link: http://github.com/vvxhid
+category: misc
+description: "> watch https://www.youtube.com/watch?v=qTfmvM-9vtU  \n\n**Author**\
+  \ : vvxhid yalatr3ch3 \n"
+difficulty: easy
+extra:
+  decay: 50
+  initial: 500
+  minimum: 50
+flags:
+- IngeHack{jusT_4noth3r_ARCH_us3r}
+name: i-use-arch-btw
+state: hidden
+tags:
+- misc
+type: dynamic
+value: 500
+version: '0.1'

@@ -22,5 +22,7 @@
     "reverse/ez_rev",
     "crypto/ti-al-as",
     "web/bun",
-    "web/werev"
+    "web/werev",
+    "misc/docker-disco",
+    "misc/i-use-arch"
 ]
