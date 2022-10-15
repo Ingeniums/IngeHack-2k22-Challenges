@@ -24,5 +24,7 @@
     "web/bun",
     "web/werev",
     "misc/docker-disco",
-    "misc/i-use-arch"
+    "misc/i-use-arch",
+    "pwn/guessing_game_II",
+    "crypto/Awesome-Encryption-Service"
 ]

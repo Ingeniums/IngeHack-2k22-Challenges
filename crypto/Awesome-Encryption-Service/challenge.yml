@@ -1,0 +1,47 @@
+author: akram09
+author_link: https://github.com/akram09
+category: crypto
+connection_info: nc -v crypto.chal.ctf.ingeniums.club 1001
+deployment:
+  autoban: false
+  containerPort: 1337
+  deployed: true
+  dockerImage: awesome-service-encryption
+  dockerRepository: gcr.io/ingehack-2022
+  egress: allow
+  healthCheck:
+    initialDelaySeconds: 10
+    periodSeconds: 30
+  limits:
+    cpu: 200m
+    memory: 500Mi
+  name: awesome-service-encryption
+  nodePort: 30001
+  other:
+    podAnnotations: {}
+  replicasNumber: 2
+  requests:
+    cpu: 100m
+    memory: 200Mi
+  type: tcp
+description: "> We found an oracle that encrypts secrets \n> We could also get our\
+  \ hands on the binary \n> Therefore it didn't want to give me the flag \n\n**Author**\
+  \ : akram09\n"
+difficulty: ezmed
+extra:
+  decay: 50
+  initial: 500
+  minimum: 50
+files:
+- challenge/main
+flags:
+- IngeHack{A35C7R}
+image: gcr.io/ingehack-2022/awesome-service-encryption
+name: Awesome-Service-Encryption
+state: hidden
+tags:
+- crypto
+- reverse
+type: dynamic
+value: 500
+version: '0.1'
