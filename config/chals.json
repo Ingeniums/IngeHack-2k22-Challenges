@@ -109,16 +109,6 @@
         "nodeport": 30201,
         "port": 1201
     },
-    "guessingame2": {
-        "name": "guessingame2",
-        "subdomain": "guessingame2",
-        "type": "tcp",
-        "category": "pwn",
-        "autoban": false,
-        "path": "pwn/guessing_game_II",
-        "nodeport": 30403,
-        "port": 1403
-    },
     "awesome-service-encryption": {
         "name": "awesome-service-encryption",
         "subdomain": "awesome-service-encryption",
@@ -128,5 +118,15 @@
         "path": "crypto/Awesome-Encryption-Service",
         "nodeport": 30001,
         "port": 1001
+    },
+    "guessingame2": {
+        "name": "guessingame2",
+        "subdomain": "guessingame2",
+        "type": "tcp",
+        "category": "pwn",
+        "autoban": false,
+        "path": "pwn/guessing_game_II",
+        "nodeport": 30403,
+        "port": 1403
     }
 }
