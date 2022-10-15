@@ -1,0 +1,31 @@
+name: "Guessing Game II"
+author: "Scorpion197"
+author_link: "https://github.com/Scorpion197"
+
+category: pwn
+
+difficulty: easy
+
+description: |
+  > Yet another game to defeat random
+flags:
+  - IngeHack{gu3$$1ng_r4nd0m_numb3r$_1s_3asy_r1ght?}
+
+tags:
+  - pwn
+
+files:
+  - ./dist/dist.zip
+
+image: guessingame
+
+connection_info: nc hostname 9006
+
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 15
+  minimum: 50
+state: hidden
+version: "0.1"
