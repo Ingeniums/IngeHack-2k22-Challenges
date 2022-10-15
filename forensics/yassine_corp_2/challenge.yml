@@ -1,29 +1,18 @@
-name: yassine_corp_2
 author: Fa2y
 author_link: https://github.com/Fa2y
-
 category: forensics
+description: "> Congrats on the first stage of the engagement, now to the internal\
+  \ penetration test. \n> NOTICE: This is a local challenge, the wifi password is\
+  \ the first stage's flag\n> The target: `yassine.server`\n\n\n**Author** : @Fa2y/@yalatr3ch3\n"
 difficulty: medium
-
-description: |
-  > Congrats on the first stage of the engagement, now to the internal penetration test. 
-  > NOTICE: This is a local challenge, the wifi password is the first stage's flag
-  > The target: `yassine.server`
-
-
-  **Author** : @Fa2y/@yalatr3ch3
-
+extra:
+  decay: 50
+  initial: 500
+  minimum: 50
 flags:
-  - IngeHack{C4tch1n9_a77ack5_0V3r_7h3_a1R}
-
+- IngeHack{C4tch1n9_a77ack5_0V3r_7h3_a1R}
+name: yassine_corp_2
+state: hidden
 type: dynamic
 value: 500
-extra:
-    initial: 500
-    decay: ${DECAY}
-    minimum: 50
-
-
-state: hidden
-
-version: "0.1"
+version: '0.1'

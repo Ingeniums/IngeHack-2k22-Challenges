@@ -26,5 +26,7 @@
     "misc/docker-disco",
     "misc/i-use-arch",
     "pwn/guessing_game_II",
-    "crypto/Awesome-Encryption-Service"
+    "crypto/Awesome-Encryption-Service",
+    "forensics/yassine_corp_1",
+    "forensics/yassine_corp_2"
 ]
