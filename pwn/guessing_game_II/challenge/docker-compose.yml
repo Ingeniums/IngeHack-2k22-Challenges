@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  guessingame:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "9006:9006"
